@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Typhoon - E-Safety</title>
+    <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel ="icon" type="img/jpg" href="images/logo-1.png">
+		<link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+	</head>
+	
+	<body>
+
+    <nav> 
+      <ul class="sidebar">
+        <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#000000"><path d="m291-240-51-51 189-189-189-189 51-51 189 189 189-189 51 51-189 189 189 189-51 51-189-189-189 189Z"/></svg></a></li>
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <button class="sidebar-dropbtn">Topics ▾</button>
+          <div class="sidebar-dropdown-content">
+            <a href="earthquake.html">Earthquake</a>
+            <a href="typhoon.html">Typhoon</a>
+            <a href="volcanic.html">Volcano Eruption</a>
+            <a href="fire.html">Fire</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <button class="sidebar-dropbtn">Quizzes ▾</button>
+          <div class="sidebar-dropdown-content">
+            <a href="earthquake quiz.html">Earthquake</a>
+            <a href="typhoon quiz.html">Typhoon</a>
+            <a href="volcano quiz.html">Volcano Eruption</a>
+            <a href="fire quiz.html">Fire</a>
+            <a href="general quiz.html">General Quiz</a>
+          </div>
+        </li>
+        <li><a href="sources.html">Sources</a></li>
+        </div>
+      </ul>
+      
+      <div class="nav-logo">
+        <a href="index.html"><img src="images/logo-2.png" alt="E-Safety Logo" class="logo"></a>
+      </div>
+
+      <ul>
+        <li class="hideOnMobile"><a href="index.html">Home</a></li>
+        <li class="dropdown" id="hideOnMobile">
+          <button class="sidebar-dropbtn">Topics ▾</button>
+          <div class="dropdown-content">
+            <a href="earthquake.html">Earthquake</a>
+            <a href="typhoon.html">Typhoon</a>
+            <a href="volcanic.html">Volcano Eruption</a>
+            <a href="fire.html">Fire</a>
+          </div>
+        </li>
+        <li class="dropdown" id="hideOnMobile">
+          <button class="sidebar-dropbtn">Quizzes ▾</button>
+          <div class="dropdown-content">
+            <a href="earthquake quiz.html">Earthquake</a>
+            <a href="typhoon quiz.html">Typhoon</a>
+            <a href="volcano quiz.html">Volcano Eruption</a>
+            <a href="fire quiz.html">Fire</a>
+            <a href="general quiz.html">General Quiz</a>
+          </div>
+        </li>
+        <li class="hideOnMobile"><a href="sources.html">Sources</a></li>
+        </div>
+        <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#000000"><path d="M144-264v-72h672v72H144Zm0-180v-72h672v72H144Zm0-180v-72h672v72H144Z"/></svg></a></li>
+      </ul>
+    </nav>
+
+    <script>
+
+      function showSidebar() {
+        const sidebar = document.querySelector ('.sidebar')
+        sidebar.style.display = 'flex'
+      }
+      function hideSidebar() {
+        const sidebar = document.querySelector ('.sidebar')
+        sidebar.style.display = 'none'
+      }
+  
+      var dropdown = document.getElementsByClassName("sidebar-dropbtn");
+      var i;
+      
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var dropdownContent = this.nextElementSibling;
+          if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+          } else {
+            dropdownContent.style.display = "block";
+          }
+        });
+      }
+    </script>
+
+    <div class="typhoon-bg"></div>
+
+    <div class="topics-title">
+      <h1>Typhoon</h1>
+      <ul>
+        
+        <li><a href="typhoon quiz.html">Quiz</a></li>
+      </ul>
+    </div>
+
+    <div class="topics-container">
+
+      <div class="mobile-content2">
+          <ul>
+            <h3>In this lecture</h3>
+            <li><a href="#ty-1">What is Typhoon?</a></li>
+            <li><a href="#ty-2">Classification of Typhoon</a></li>
+            <li><a href="#ty-3">Typhoon Preparedness</a></li>
+            <li><a href="#ty-4">Before the Typhoon</a></li>
+            <li><a href="#ty-5">During the Typhoon</a></li>
+            <li><a href="#ty-6">After the Typhoon</a></li>
+          </ul>
+      </div>
+
+      <div class="content1">
+        <p class="content1-source">from <a href="https://www.pagasa.dost.gov.ph/"><i>PAGASA (Philippine Atmospheric, Geophysical and Astronomical Services Administration)<br><br></i></a></p>
+        <h1 id="ty-1">What is Typhoon?</h1>
+        <p>A <b>typhoon</b> is a large, powerful and violent tropical cyclone. It is a low-pressure area 
+          rotating counter-clockwise and containing rising warm air that forms over warm water in 
+          the Western Pacific Ocean. Less powerful tropical cyclones are called Tropical Depressions 
+          and Tropical Storms. A typhoon is called a hurricane in the Atlantic Ocean, a cyclone in 
+          the Indian Ocean and wily-wily in Australia. Typhoons can inflict terrible damage due to 
+          thunderstorms, violent winds, torrential rain, floods, landslides, large and very big waves 
+          associated with storm surges.<br><br></p>
+
+        <h1 id="ty-2">Classifications of Typhoons</h1>
+        <p><b>Tropical Depression</b> - maximum winds from 35 kph to 63 kph</p>
+        <p><b>Tropical Storm</b> - maximum winds from 64 kph to 118 kph</p>
+        <p id="ty-3"><b>Typhoons</b> - maximum winds exceeding 118 kph<br><br></p>
+
+        <h1 id="ty-4">Typhoon Preparedness</h1>
+
+        <h2>Before the Typhoon</h2>
+        <li>Monitor the news about weather disturbances. As the typhoon nears, watch out for the latest severe weather bulletin issued by PAGASA every six hours.</li>
+        <li>Board up windows or put storm shutters.</li>
+        <li>Check the ability of your house to withstand strong winds; strengthen it if necessary.</li>
+        <li>For fisherfolks, place boats in safe areas.</li>
+        <li>For farmers, harvest crops that can already be yielded.</li>
+        <li>Secure domesticated animals in a safe place.</li>
+        <li>Make sure flashlights and battery-powered radios have fresh batteries or are electrically-charged; stock up on candles and matches.</li>
+        <li>Store adequate food supply and clean water. Have food that do not require cooking.</li>
+        <li>Ready your emergency kit/ grab bag to include some first aid kit, candles/flashlight, clothes, food, and radio.</li>
+        <li>Prepare a list of emergency hotline numbers, including contact details of authorities.</li>
+        <li>Be on standby and assess when it may be necessary for you to evacuate to safer areas.</li>
+        <li id="ty-5">Secure important documents.<br><br></li>
+
+        <h2>During the Typhoon</h2>
+        <li>Continue to monitor the news for weather updates.</li>
+        <p>For public storm signal number 1 or 2</p>
+        <li>People travelling by sea and air must avoid unnecessary risks.</li>
+        <li>Evacuate from low-lying areas to higher grounds.</li>
+        <p>In case of storm signal number 3 or 4</p>
+        <li>Watch out for the passage of the "eye" of the storm.</li>
+        <li>Stay inside safe and strong houses or structures or proceed to evacuation centers.</li>
+        <li>Stay away from coasts and riverbanks.</li>
+        <li>Cancel all travels and outdoor activities.</li>
+        <p id="ty-6">If asked by authorities to evacuate, do so calmly; shut all windows, turn off main power supply, and secure the house.<br><br></p>
+
+        <h2>After the Typhoon</h2>
+        <li>Do not touch or approach any live wires or outlets immersed with water.</li>
+        <li>Check whether the water supply is safe to drink. If not, boil water for at least 20 minutes.</li>
+        <li>Keep all power and electronic appliances off until cleared safe by a professional.</li>
+        <li>Beware of any dangerous animals i.e., snake, that may have entered your house.</li>
+        <li>Call power utility companies if there are any damaged transmission lines or posts.</li>
+        <li>If your house is insured, take photos of the extent of damage to your house to support your insurance claims.</li>
+        <li>Clean the entire home and all objects affected by flood as chemicals and sewage water may have contaminated these. Wear appropriate gear (gloves & mask).</li>
+        <li>If you have evacuated, only return to your house after authorities deem it safe.</li>
+        <li>If your house was damaged or destroyed, make sure that it is safe and stable before entering.</li>
+      </div>
+
+      <div class="content2">
+        <h3>In this lecture</h3>
+        <ul>
+            <li><a href="#ty-1">What is Typhoon?</a></li>
+            <li><a href="#ty-2">Classification of Typhoon</a></li>
+            <li><a href="#ty-3">Typhoon Preparedness</a></li>
+            <li><a href="#ty-4">Before the Typhoon</a></li>
+            <li><a href="#ty-5">During the Typhoon</a></li>
+            <li><a href="#ty-6">After the Typhoon</a></li>
+          </ul>
+      </div>
+    </div>
+
+    <footer>
+      <a href="index.html"><img src="images/logo-3.png" alt="E-Safety Logo" class="logo"></a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sources.html">Sources</a></li>
+        <li><a href="contact.html">Contacts</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <p>© 2024, E-Safety</p>
+    </footer>
+
+    
+  </body>
+</html>

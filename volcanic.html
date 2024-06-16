@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Volcano Eruption - E-Safety</title>
+    <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel ="icon" type="img/jpg" href="images/logo-1.png">
+		<link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+	</head>
+	
+	<body>
+
+    <nav> 
+      <ul class="sidebar">
+        <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#000000"><path d="m291-240-51-51 189-189-189-189 51-51 189 189 189-189 51 51-189 189 189 189-51 51-189-189-189 189Z"/></svg></a></li>
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <button class="sidebar-dropbtn">Topics ▾</button>
+          <div class="sidebar-dropdown-content">
+            <a href="earthquake.html">Earthquake</a>
+            <a href="typhoon.html">Typhoon</a>
+            <a href="volcanic.html">Volcano Eruption</a>
+            <a href="fire.html">Fire</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <button class="sidebar-dropbtn">Quizzes ▾</button>
+          <div class="sidebar-dropdown-content">
+            <a href="earthquake quiz.html">Earthquake</a>
+            <a href="typhoon quiz.html">Typhoon</a>
+            <a href="volcano quiz.html">Volcano Eruption</a>
+            <a href="fire quiz.html">Fire</a>
+            <a href="general quiz.html">General Quiz</a>
+          </div>
+        </li>
+        <li><a href="sources.html">Sources</a></li>
+        </div>
+      </ul>
+      
+      <div class="nav-logo">
+        <a href="index.html"><img src="images/logo-2.png" alt="E-Safety Logo" class="logo"></a>
+      </div>
+
+      <ul>
+        <li class="hideOnMobile"><a href="index.html">Home</a></li>
+        <li class="dropdown" id="hideOnMobile">
+          <button class="sidebar-dropbtn">Topics ▾</button>
+          <div class="dropdown-content">
+            <a href="earthquake.html">Earthquake</a>
+            <a href="typhoon.html">Typhoon</a>
+            <a href="volcanic.html">Volcano Eruption</a>
+            <a href="fire.html">Fire</a>
+          </div>
+        </li>
+        <li class="dropdown" id="hideOnMobile">
+          <button class="sidebar-dropbtn">Quizzes ▾</button>
+          <div class="dropdown-content">
+            <a href="earthquake quiz.html">Earthquake</a>
+            <a href="typhoon quiz.html">Typhoon</a>
+            <a href="volcano quiz.html">Volcano Eruption</a>
+            <a href="fire quiz.html">Fire</a>
+            <a href="general quiz.html">General Quiz</a>
+          </div>
+        </li>
+        <li class="hideOnMobile"><a href="sources.html">Sources</a></li>
+        </div>
+        <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#000000"><path d="M144-264v-72h672v72H144Zm0-180v-72h672v72H144Zm0-180v-72h672v72H144Z"/></svg></a></li>
+      </ul>
+    </nav>
+
+    <script>
+
+      function showSidebar() {
+        const sidebar = document.querySelector ('.sidebar')
+        sidebar.style.display = 'flex'
+      }
+      function hideSidebar() {
+        const sidebar = document.querySelector ('.sidebar')
+        sidebar.style.display = 'none'
+      }
+  
+      var dropdown = document.getElementsByClassName("sidebar-dropbtn");
+      var i;
+      
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var dropdownContent = this.nextElementSibling;
+          if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+          } else {
+            dropdownContent.style.display = "block";
+          }
+        });
+      }
+    </script>
+
+    <div class="volcanic-bg"></div>
+
+    <div class="topics-title">
+      <h1>Volcano Eruption</h1>
+      <ul>
+       
+        <li><a href="volcano quiz.html">Quiz</a></li>
+      </ul>
+    </div>
+
+    <div class="topics-container">
+
+      <div class="mobile-content2">
+          <ul>
+            <h3>In this lecture</h3>
+            <li><a href="#volc-1">What is a Volcano?</a></li>
+            <li><a href="#volc-2">Volcanic Hazards</a></li>
+            <li><a href="#volc-3">Volcano Alert Levels</a></li>
+            <li><a href="#volc-4">Volcano Eruption Preparedness</a></li>
+            <li><a href="#volc-5">Before the Volcano Eruption</a></li>
+            <li><a href="#volc-6">During the Volcano Eruption</a></li>
+            <li><a href="#volc-7">After the Volcano Eruption</a></li>
+          </ul>
+      </div>
+
+      <div class="content1">
+        <p class="content1-source">from <a href="https://www.phivolcs.dost.gov.ph/index.php"><i>PHIVOLCS (Philippine Institute of Volcanology Seismology)<br><br></i></a></p>
+        <h1 id="volc-1">What is a Volcano?</h1>
+        <p>A <b>volcano</b> is a vent, hill or mountain from which molten or hot rocks with gaseous material have been ejected. Also craters, depressions, hills or mountains formed by removal of pre-existing material or by accumulation of ejected materials. 
+          The Philippines sits on a unique tectonic setting ideal to volcanism and earthquake activity. It is situated at the boundaries of two tectonic plates – the Philippine Sea Plate and the Eurasian plate – both of which subduct or dive beneath the 
+          archipelago along the deep trenches along its east and west seaboard. Some of the volcanoes here in the Philippines are Mayon Volcano, Pinatubo Volcano, Kanlaon Volcano, Hibok-hibok Volcano, Bulusan Volcano, Taal Volcano.<br><br></p>
+
+        <h1 id="volc-2">Volcanic Hazards</h1>
+        <h3>Lava flows</h3>
+        <p>are rivers of incandescent of molten rock or lava moving downslope or away from an eruption vent. 
+          Lava flows composed of low silica magma have low viscosities and tend to flow at high speeds (kilometers per hour), 
+          while those composed of high silica magma have high viscosities and tend to move slowly (kilometers per day).  
+          Steep slopes encourage faster and longer flows than gentle slopes or terrain.<br><br></p>
+        
+        <h3>Volcanic gases</h3>
+        <p>form a dissolved component of magma that is released to the atmosphere in large quantities during eruptions. 
+          Volcanic gases form aerosols that can both cool down the earth’s atmosphere and deplete its ozone concentration for a period of time. 
+          Some volcanic gases such as hydrogen fluoride are toxic and can endanger livestock that ingest contaminated vegetation.  
+          Non-toxic species such as carbon dioxide can also be lethal when released in large quantities, displacing air and causing asphyxiation in human and animal populations.<br><br></p>
+
+        <h3>Lahar</h3>
+        <p>(an Indonesian term), sometimes called volcanic mudflows or debris flows, are slurries of volcanic sediment, debris and water that cascade down a volcano’s slopes through rivers and channels. 
+          Lahars in tropical areas are mainly generated by torrential rainfall on unconsolidated deposits from a past eruption. These can also be triggered by the sudden draining of a crater lake or a collapsed natural or man-made dam or the movement of a PDC into a river or lake and eventual mixing with water.<br><br></p>
+
+        <h3>Volcanic tsunami</h3>
+        <p id="volc-3">occurs in caldera lakes when water is displaced by deformation of the lake floor caused by rising magma or the entry of landslides into the lake, or in seas when water is displaced by PDCs or debris avalanches from volcanoes. 
+          Such tsunamis are unlike those generated by large magnitude offshore earthquakes, which are long-period waves generated by fault displacement or deformation of the seafloor.<br><br></p>
+
+        <h1>Volcano Alert Levels</h1>
+        <h3>Alert Level 1</h3>
+        <p><b>Low level unrest</b> - No eruption imminent</p>
+        <p>Activity may be hydrothermal, magmatic or tectonic in origin. No entry in the 6-km radius PDZ.<br><br></p>
+
+        <h3>Alert Level 2</h3>
+        <p><b>Moderate Unrest</b> - Could eventually lead to eruption.</p>
+        <p>6-km radius Danger Zone may be extended to 7 km in the sector where the crater rim is low.<br><br></p>
+
+        <h3>Alert Level 3</h3>
+        <p><b>Relatively High Unrest</b> - Eruption is possible within weeks.</p>
+        <p>Extension of Danger Zone in the sector where the crater rim is low will be considered.<br><br></p>
+
+        <h3>Alert Level 4</h3>
+        <p><b>Intense Unrest</b> - Hazardous eruption is possible within days.</p>
+        <p>Extension of Danger zone to 8km or more in the sector where the crater rim is low will be recommended.<br><br></p>
+
+        <h3>Alert Level 5</h3>
+        <p><b>Hazardous Eruption Ongoing</b> - Pyroclastic flows may sweep down along gullies and channels, especially among those fronting the low part(s) of the crater rim.</p>
+        <p id="volc-4">Additional danger areas may be identified as eruption progresses. Danger to aircraft, by way of ash cloud encounter, depending on height of eruption column and/or wind drift.<br><br></p>
+        
+        <h1 id="volc-5">Volcano Eruption Preparedness</h1>
+        
+        <h2>Before the Eruption</h2>
+        <p>Know the signs of an impending eruption.</p>
+        <li>Increase in the frequency of volcanic quakes accompanied by rumbling sounds.</li>
+        <li>Change in color of steam emission from white to gray.</li>
+        <li>Drying up of vegetation, springs and wells around the volcano.</li>
+        <li>Development of new thermal areas or reactivation of old ones.<br><br></li>
+
+        <p>Know the community's safety plan.</p>
+        <li>Always monitor the volcano updates and watch out for advisories and warnings.</li>
+        <li>Know the location of the evacuation site and the fastest and safest way to go there.</li>
+        <li id="volc-6">Prepare your family's kit containing items needed for survival.<br><br></li>
+
+        <h2>During the Eruption</h2>
+        <p>Stay away from danger zones.</p>
+        <li>When notified, immediately evacuate to safer grounds.</li>
+        <li>Assists in evacuating children, pregnant women, PWDs and older people.</li>
+        <li>Cover your mouth with wet cloth and wear protective goggles.</li>
+        <li>Keep your pets in their shelter or inside to avoid them from inhaling ash.</li>
+        <li id="volc-7">Stay away from rivers and streams for possible lahar flow.<br><br></li>
+
+        <h2>After the Eruption</h2>
+        <p>Remain alert and be cautious.</p>
+        <li>Leave the evacuation area only when authorities say it is safe.</li>
+        <li>Wear masks when cleaning.</li>
+        <li>Scrape the accumulated ash in roofs to prevent collapse.</li>
+        <li>Shake loose ash from plants before watering.</li>
+      </div>
+
+      <div class="content2">
+        <h3>In this lecture</h3>
+        <ul>
+          <li><a href="#volc-1">What is a Volcano?</a></li>
+          <li><a href="#volc-2">Volcanic Hazards</a></li>
+          <li><a href="#volc-3">Volcano Alert Levels</a></li>
+          <li><a href="#volc-4">Volcano Eruption Preparedness</a></li>
+          <li><a href="#volc-5">Before the Volcano Eruption</a></li>
+          <li><a href="#volc-6">During the Volcano Eruption</a></li>
+          <li><a href="#volc-7">After the Volcano Eruption</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="video">
+      <iframe src="https://www.youtube.com/embed/Z-w_z9yobpE?si=BKAMna8uh0fLkjNh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <footer>
+      <a href="index.html"><img src="images/logo-3.png" alt="E-Safety Logo" class="logo"></a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sources.html">Sources</a></li>
+        <li><a href="contact.html">Contacts</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <p>© 2024, E-Safety</p>
+    </footer>
+
+  </body>
+</html>
+
+

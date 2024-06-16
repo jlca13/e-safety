@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Fire Disaster - E-Safety</title>
+    <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel ="icon" type="img/jpg" href="images/logo-1.png">
+		<link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+	</head>
+	
+	<body>
+
+    <nav> 
+      <ul class="sidebar">
+        <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#000000"><path d="m291-240-51-51 189-189-189-189 51-51 189 189 189-189 51 51-189 189 189 189-51 51-189-189-189 189Z"/></svg></a></li>
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <button class="sidebar-dropbtn">Topics ▾</button>
+          <div class="sidebar-dropdown-content">
+            <a href="earthquake.html">Earthquake</a>
+            <a href="typhoon.html">Typhoon</a>
+            <a href="volcanic.html">Volcano Eruption</a>
+            <a href="fire.html">Fire</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <button class="sidebar-dropbtn">Quizzes ▾</button>
+          <div class="sidebar-dropdown-content">
+            <a href="earthquake quiz.html">Earthquake</a>
+            <a href="typhoon quiz.html">Typhoon</a>
+            <a href="volcano quiz.html">Volcano Eruption</a>
+            <a href="fire quiz.html">Fire</a>
+            <a href="general quiz.html">General Quiz</a>
+          </div>
+        </li>
+        <li><a href="sources.html">Sources</a></li>
+        </div>
+      </ul>
+      
+      <div class="nav-logo">
+        <a href="index.html"><img src="images/logo-2.png" alt="E-Safety Logo" class="logo"></a>
+      </div>
+
+      <ul>
+        <li class="hideOnMobile"><a href="index.html">Home</a></li>
+        <li class="dropdown" id="hideOnMobile">
+          <button class="sidebar-dropbtn">Topics ▾</button>
+          <div class="dropdown-content">
+            <a href="earthquake.html">Earthquake</a>
+            <a href="typhoon.html">Typhoon</a>
+            <a href="volcanic.html">Volcano Eruption</a>
+            <a href="fire.html">Fire</a>
+          </div>
+        </li>
+        <li class="dropdown" id="hideOnMobile">
+          <button class="sidebar-dropbtn">Quizzes ▾</button>
+          <div class="dropdown-content">
+            <a href="earthquake quiz.html">Earthquake</a>
+            <a href="typhoon quiz.html">Typhoon</a>
+            <a href="volcano quiz.html">Volcano Eruption</a>
+            <a href="fire quiz.html">Fire</a>
+            <a href="general quiz.html">General Quiz</a>
+          </div>
+        </li>
+        <li class="hideOnMobile"><a href="sources.html">Sources</a></li>
+        </div>
+        <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#000000"><path d="M144-264v-72h672v72H144Zm0-180v-72h672v72H144Zm0-180v-72h672v72H144Z"/></svg></a></li>
+      </ul>
+    </nav>
+
+    <script>
+
+      function showSidebar() {
+        const sidebar = document.querySelector ('.sidebar')
+        sidebar.style.display = 'flex'
+      }
+      function hideSidebar() {
+        const sidebar = document.querySelector ('.sidebar')
+        sidebar.style.display = 'none'
+      }
+  
+      var dropdown = document.getElementsByClassName("sidebar-dropbtn");
+      var i;
+      
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var dropdownContent = this.nextElementSibling;
+          if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+          } else {
+            dropdownContent.style.display = "block";
+          }
+        });
+      }
+    </script>
+
+    <div class="fire-bg"></div>
+
+    <div class="topics-title">
+      <h1>Fire Disaster</h1>
+      <ul>
+        
+        <li><a href="fire quiz.html">Quiz</a></li>
+      </ul>
+    </div>
+
+    <div class="topics-container">
+
+      <div class="mobile-content2">
+        <ul>
+          <h3>In this lecture</h3>
+            <li><a href="#fire-1">What is a Fire?</a></li>
+            <li><a href="#fire-2">What makes a Fire?</a></li>
+            <li><a href="#fire-3">Common Causes of House Fire</a></li>
+            <li><a href="#fire-4">Fire Prevention Tips and Safety Measures</a></li>
+            <li><a href="#fire-5">What to do during the Fire</a></li>
+        </ul>
+      </div>
+
+      <div class="content1">
+        <p class="content1-source">from <a href="https://bfp.gov.ph/"><i>Bureau of Fire Protection<br><br></i></a></p>
+        <h1 id="fire-1">What is a Fire?</h1>
+        <p>The First step in preventing fires is to understand exactly what it is. The Fire Code of the Philippines (RA9514) defines 
+          fire as the active principle of burning, characterized by heat and light of combustion. It is a rapid oxidation of a material in the 
+          exothermic chemical processes of combustion, releasing heat, light, and various reaction products. It is neither solid nor liquid. 
+          Fire is a chemical reaction that results in light and heat and it usually occurs only in the gas phase. Solids must be heated first, 
+          to decay and produce gases, a process called pyrolysis. Liquids must be heated to produce ignitable mixtures in air (vaporization).<br><br></p>
+
+        <h1 id="fire-2">What makes a Fire?</h1>
+        <h3>Heat</h3>
+        <p>Heat/ignition sources include anything capable of generating heat for example lightning, cigarettes, powerlines, catalytic converters, 
+          small engine sparks, matches, and sunlight hitting a magnifying glass.<br><br></p>
+
+        <h3>Fuel</h3>
+        <p>It is anything that can burn and contains the chemical potential energy released during combustion. Initially, the fuel may be in the form of a solid, liquid, or gas at the ambient temperature.<br><br></p>
+
+        <h3>Oxygen</h3>
+        <p id="fire-3">Air contains about 21 percent oxygen, and most fires require at least 16 percent oxygen content to burn.<br><br></p>
+
+        <h1>Common Causes of Fire</h1>
+        <li>Faulty Electrical Wiring</li>
+        <li>Defective Electrical Equipment or Appliances</li>
+        <li>Cooking</li>
+        <li>Oven and Stove Left Unattended</li>
+        <li>Unattended Lit Candle</li>
+        <li>Children playing with fire</li>
+        <li>Smoking carelessly improperly</li>
+        <li>Stored flammable liquids</li>
+        <li id="fire-4">Substandard Christmas tree light decoration<br><br></li>
+
+        <h1>Fire Prevention<br> Tips and Safety Measures</h1>
+        <li>Unplug or Disconnect Appliances When not in Use</li>
+        <li>Stay in the Kitchen While Cooking</li>
+        <li>Have Fire Extinguisher of Install Fire Protection Systems</li>
+        <li>Keep an Eye on Lighted Candles</li>
+        <li id="fire-5">Remove or Replace Damaged Appliances<br><br></li>
+
+        <h1>What to do During the Fire</h1>
+        <p>Once you are out, stay out</p>
+        <li>Never attempt to get inside again to save any of your important belongings, possessions, your life matters more than anything.<br><br></li>
+        <p>If you're stuck in a room</p>
+        <li>Find an escape route, break your windows or any means of exit to ensure your safety.<br><br></li>
+        <p>Do not open the door</p>
+        <li>If the door handle is warm or very hot & if you see smoke coming under the door.<br><br></li>
+        <p>Use the stairs instead</p>
+        <li>If you're inside the building, refrain from using an elevator.<br><br></li>
+        <p>Stop, Drop, Rollover</p>
+        <li>If your clothes catch on fire, stop what you're doing. Drop to the ground and cover your face if you can and roll over and over until the flames go out. Running will only make the fire burn faster.</li>
+      
+      </div>
+
+      <div class="content2">
+        <h3>In this lecture</h3>
+        <ul>
+          <li><a href="#fire-1">What is a Fire?</a></li>
+          <li><a href="#fire-2">What makes a Fire?</a></li>
+          <li><a href="#fire-3">Common Causes of House Fire</a></li>
+          <li><a href="#fire-4">Fire Prevention Tips and Safety Measures</a></li>
+          <li><a href="#fire-5">What to do during the Fire</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="video">
+      <iframe src="https://www.youtube.com/embed/C9KSFRq4rXA?si=Qwl1IMyr03SBvS1z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <footer>
+      <a href="index.html"><img src="images/logo-3.png" alt="E-Safety Logo" class="logo"></a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sources.html">Sources</a></li>
+        <li><a href="contact.html">Contacts</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <p>© 2024, E-Safety</p>
+    </footer>
+
+  </body>
+</html>
+

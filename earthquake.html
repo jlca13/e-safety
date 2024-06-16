@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	  <title>Earthquake - E-Safety</title>
+    <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <link rel ="icon" type="img/jpg" href="images/logo-1.png">
+	  <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  </head>
+	
+  <body>
+
+    <nav> 
+      <ul class="sidebar">
+        <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#000000"><path d="m291-240-51-51 189-189-189-189 51-51 189 189 189-189 51 51-189 189 189 189-51 51-189-189-189 189Z"/></svg></a></li>
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <button class="sidebar-dropbtn">Topics ▾</button>
+          <div class="sidebar-dropdown-content">
+            <a href="earthquake.html">Earthquake</a>
+            <a href="typhoon.html">Typhoon</a>
+            <a href="volcanic.html">Volcano Eruption</a>
+            <a href="fire.html">Fire</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <button class="sidebar-dropbtn">Quizzes ▾</button>
+          <div class="sidebar-dropdown-content">
+            <a href="earthquake quiz.html">Earthquake</a>
+            <a href="typhoon quiz.html">Typhoon</a>
+            <a href="volcano quiz.html">Volcano Eruption</a>
+            <a href="fire quiz.html">Fire</a>
+            <a href="general quiz.html">General Quiz</a>
+          </div>
+        </li>
+        <li><a href="sources.html">Sources</a></li>
+        </div>
+      </ul>
+      
+      <div class="nav-logo">
+        <a href="index.html"><img src="images/logo-2.png" alt="E-Safety Logo" class="logo"></a>
+      </div>
+
+      <ul>
+        <li class="hideOnMobile"><a href="index.html">Home</a></li>
+        <li class="dropdown" id="hideOnMobile">
+          <button class="sidebar-dropbtn">Topics ▾</button>
+          <div class="dropdown-content">
+            <a href="earthquake.html">Earthquake</a>
+            <a href="typhoon.html">Typhoon</a>
+            <a href="volcanic.html">Volcano Eruption</a>
+            <a href="fire.html">Fire</a>
+          </div>
+        </li>
+        <li class="dropdown" id="hideOnMobile">
+          <button class="sidebar-dropbtn">Quizzes ▾</button>
+          <div class="dropdown-content">
+            <a href="earthquake quiz.html">Earthquake</a>
+            <a href="typhoon quiz.html">Typhoon</a>
+            <a href="volcano quiz.html">Volcano Eruption</a>
+            <a href="fire quiz.html">Fire</a>
+            <a href="general quiz.html">General Quiz</a>
+          </div>
+        </li>
+        <li class="hideOnMobile"><a href="sources.html">Sources</a></li>
+        </div>
+        <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#000000"><path d="M144-264v-72h672v72H144Zm0-180v-72h672v72H144Zm0-180v-72h672v72H144Z"/></svg></a></li>
+      </ul>
+    </nav>
+
+    <script>
+
+      function showSidebar() {
+        const sidebar = document.querySelector ('.sidebar')
+        sidebar.style.display = 'flex'
+      }
+      function hideSidebar() {
+        const sidebar = document.querySelector ('.sidebar')
+        sidebar.style.display = 'none'
+      }
+  
+      var dropdown = document.getElementsByClassName("sidebar-dropbtn");
+      var i;
+      
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var dropdownContent = this.nextElementSibling;
+          if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+          } else {
+            dropdownContent.style.display = "block";
+          }
+        });
+      }
+    </script>
+
+    <div class="earthquake-bg"></div>
+
+    <div class="topics-title">
+      <h1>Earthquake</h1>
+      <ul>
+        
+        <li><a href="earthquake quiz.html">Quiz</a></li>
+      </ul>
+    </div>
+
+    <div class="topics-container">
+
+      <div class="mobile-content2">
+          <ul>
+            <h3>In this lecture</h3>
+            <li><a href="#earthquake1">What is an Earthquake?</a></li>
+            <li><a href="#earthquake2">Earthquake Hazards</a></li>
+            <li><a href="#earthquake3">Earthquake Preparedness</a></li>
+            <li><a href="#earthquake4">Before the Earthquake</a></li>
+            <li><a href="#earthquake5">During the Earthquake</a></li>
+            <li><a href="#earthquake6">After the Earthquake</a></li>
+          </ul>
+      </div>
+
+      <div class="content1">
+        <p class="content1-source">from <a href="https://www.phivolcs.dost.gov.ph/index.php"><i>PHIVOLCS (Philippine Institute of Volcanology Seismology)<br><br></i></a></p>
+        <h1 id="earthquake1">What is an Earthquake?</h1>
+          <p>
+            An <b>earthquake</b> is a weak to violent shaking of the ground
+            produced by the sudden movement of rock materials below the earth’s surface.
+          </p>
+          <p>
+            The earthquakes originate in tectonic plate boundary. The focus is point 
+            inside the earth where the earthquake started, sometimes called the hypocenter, 
+            and the point on the surface of the earth directly above the focus is called 
+            the epicenter.
+          </p>
+          <p>
+            <br>There are two ways by which we can measure the strength of an earthquake: <b>magnitude and intensity.</b><br>
+            <br><b>Magnitude</b> is proportional to the energy released by an earthquake at the focus. 
+            It is calculated from earthquakes recorded by an instrument called <b>seismograph.</b> 
+            It is represented by Arabic Numbers (e.g. 4.8, 9.0). 
+            <br><b>Intensity</b> on the other hand, is the strength of an earthquake as perceived and felt by people in a certain locality. 
+            It is a numerical rating based on the relative effects to people, objects, environment, 
+            and structures in the surrounding. The intensity is generally higher near the epicenter. 
+            It is represented by Roman Numerals (e.g. II, IV, IX). In the Philippines, the intensity of 
+            an earthquake is determined using the PHIVOLCS Earthquake Intensity Scale (PEIS).
+          </p><br>
+          <p>There are two types of earthquakes: <b>tectonic and volcanic earthquakes.</b></p><br>
+          <p><b>Tectonic earthquakes</b> are produced by sudden movement along faults and plate boundaries.</p> 
+          <p id="earthquake2">Earthquakes induced by rising lava or magma beneath active volcanoes is called <b>volcanic 
+            earthquakes.</b><br><br></p>
+
+          <h1>Earthquake Hazards</h1>
+          <h3>Ground Rapture</h3>
+          <p>Deformation on the ground that marks, the intersection of the fault with the earth’s surface.</p>
+          <p><b>Effects:</b> fissuring, displacement of the ground due to movement of the fault.</p>
+
+          <h3><br>Ground Shaking</h3>
+          <p>Disruptive up, down and sideways vibration of the ground during an earthquake.</p>
+          <p><b>Effects:</b> ground shaking are damage or collapse of structure; may consequently 
+            cause hazards such as liquefaction and landslide.</p>
+
+          <h3><br>Liquefaction</h3>
+          <p>Phenomenon wherein sediments, especially near bodies of water, 
+            behave like liquid similar to a quicksand.</p>
+          <p><b>Effects:</b> sinking and/ or tilting of structure above it; sandboil; fissuring.</p>
+
+          <h3><br>Earthquake-indused Landslide</h3>
+          <p>Down slope movement of rocks, solid and other debris commonly triggered by strong shaking.</p>
+          <p><b>Effects:</b> erosion; burial and blockage of roads and rivers.</p>
+
+          <h3><br>Tsunami</h3>
+          <p>Series of waves caused commonly by an earthquake under the sea.</p>
+          <p id="earthquake3"><b>Effects:</b> flooding; coastal erosion; drowning of people and damage to properties.<br><br></p>
+
+          <h1 id="earthquake4">Earthquake Preparedness</h1>
+
+          <h2>Before the Earthquake</h2>
+            <p>The key to effective disaster prevention is planning:
+            <li>Know the earthquake hazards in your area.</li>
+            <li>Follow structural design and engineering practices when constructing a house or building.</li>
+            <li>Evaluate the structural soundness of the buildings and houses; strengthen or retrofit if necessary.<br><br></li>
+            
+            <p>Prepare your homes, workplace, or schools:</p>
+            <li>Strap or bolt heavy furniture & cabinets to the walls.</li>
+            <li>Check the stability of hanging objects like ceiling fans and chandeliers.</li>
+            <li>Breakable items, harmful chemicals and flammable materials should be stored properly in the 
+              lowermost secured shelves.<br><br></li>
+
+            <p>Familiarize yourself with the exit routes.</p>
+            <li>Know where fire extinguishers, first aid kits, alarms, and communication facilities are located.
+              Learn how to use them beforehand.</li>
+            <li>Prepare a handy emergency supply kit with first aid kit, canned food and can opener, water, clothing,
+             blanket, battery-operated radio, flashlights, and extra batteries.</li>
+            <li id="earthquake5">Importantly, conduct and participate in regular earthquake drills.<br><br></li>
+
+          <h2>During the Earthquake</h2>
+          <p>Stay Calm. When you are INSIDE a structurally sound building or home... STAY THERE!</p>
+          <li>If possible, quickly open the door for exit.</li>
+          <li>Remember the DUCK, COVER, AND HOLD.</li>
+          <li>Duck under a sturdy desk or table and hold on to it, or protect your head with your arms.</li>
+          <li>Stay away from glass windows, shelves, cabinets and other heavy objects.</li>
+          <li>Beware of falling objects. Be alert and keep your eyes open.<br><br></li>
+
+          <p>If you're OUTSIDE... move to an open area!</p>
+          <li>Stay away from frees, powerlines, posts and concrete structures.</li>
+          <li>Move away from steep slopes which may be affected by landslides.</li>
+          <li>If you're near the shore and feel an earthquake, especially if it's too strong, move quickly to higher grounds. 
+            Tsunamis might follow.</li>
+          <li id="earthquake6">If you're in a moving vehicle, STOP and get out! Do not attempt to cross bridges, overpasses, 
+            or flyovers which may have been damaged.<br><br></li>
+
+          <h2>After the Earthquake</h2>
+          <p>Be prepared for aftershocks, once the shaking stops, take the fastest and safest ways out of the building.<br><br></p>
+
+          <p>DON'Ts</p>
+          <li>Don't use elevators.</li>
+          <li>Don't enter damaged buildings.</li>
+          <li>Don't use telephones unless necessary.</li>
+          <li>Don't Panic.<br><br></li>
+
+          <p>YOU NEED TO CHECK</p>
+          <li>Check yourself and others for injuries.</li>
+          <li>Check water and electrical lines for damages.</li>
+          <li>Check for spills of chemical, toxic and flammable materials.</li>
+          <li>Check and control fires which may spread.<br><br></li>
+
+          <p>If you need to evacuate your residence, leave a message stating where you are going and bring your emergency supply kit.
+            <br>Keep updated on disaster prevention instructions from battery-operated radios.</p>
+      </div>
+
+      <div class="content2">
+        <h3>In this lecture</h3>
+          <ul>
+            <li><a href="#earthquake1">What is an Earthquake?</a></li>
+            <li><a href="#earthquake2">Earthquake Hazards</a></li>
+            <li><a href="#earthquake3">Earthquake Preparedness</a></li>
+            <li><a href="#earthquake4">Before the Earthquake</a></li>
+            <li><a href="#earthquake5">During the Earthquake</a></li>
+            <li><a href="#earthquake6">After the Earthquake</a></li>
+          </ul>
+      </div>
+
+    </div>
+    
+    <div class="video">
+      <iframe src="https://www.youtube.com/embed/MKILThtPxQs?si=IyFwhSHtTUXkh607" title="YouTube video player" frameborder="0" allow="accelerometer; 
+      autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <footer>
+      <a href="index.html"><img src="images/logo-3.png" alt="E-Safety Logo" class="logo"></a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sources.html">Sources</a></li>
+        <li><a href="contact.html">Contacts</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <p>© 2024, E-Safety</p>
+    </footer>
+    
+	</body>
+</html>

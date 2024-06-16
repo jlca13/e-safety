@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Contact us - E-Safety</title>
+    <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel ="icon" type="img/jpg" href="images/logo-1.png">
+		<link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+	</head>
+	
+	<body>
+    
+    <nav> 
+      <ul class="sidebar">
+        <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#000000"><path d="m291-240-51-51 189-189-189-189 51-51 189 189 189-189 51 51-189 189 189 189-51 51-189-189-189 189Z"/></svg></a></li>
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <button class="sidebar-dropbtn">Topics ▾</button>
+          <div class="sidebar-dropdown-content">
+            <a href="earthquake.html">Earthquake</a>
+            <a href="typhoon.html">Typhoon</a>
+            <a href="volcanic.html">Volcano Eruption</a>
+            <a href="fire.html">Fire</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <button class="sidebar-dropbtn">Quizzes ▾</button>
+          <div class="sidebar-dropdown-content">
+            <a href="earthquake quiz.html">Earthquake</a>
+            <a href="typhoon quiz.html">Typhoon</a>
+            <a href="volcano quiz.html">Volcano Eruption</a>
+            <a href="fire quiz.html">Fire</a>
+            <a href="general quiz.html">General Quiz</a>
+          </div>
+        </li>
+        <li><a href="sources.html">Sources</a></li>
+        </div>
+      </ul>
+      
+      <div class="nav-logo">
+        <a href="index.html"><img src="images/logo-2.png" alt="E-Safety Logo" class="logo"></a>
+      </div>
+
+      <ul>
+        <li class="hideOnMobile"><a href="index.html">Home</a></li>
+        <li class="dropdown" id="hideOnMobile">
+          <button class="sidebar-dropbtn">Topics ▾</button>
+          <div class="dropdown-content">
+            <a href="earthquake.html">Earthquake</a>
+            <a href="typhoon.html">Typhoon</a>
+            <a href="volcanic.html">Volcano Eruption</a>
+            <a href="fire.html">Fire</a>
+          </div>
+        </li>
+        <li class="dropdown" id="hideOnMobile">
+          <button class="sidebar-dropbtn">Quizzes ▾</button>
+          <div class="dropdown-content">
+            <a href="earthquake quiz.html">Earthquake</a>
+            <a href="typhoon quiz.html">Typhoon</a>
+            <a href="volcano quiz.html">Volcano Eruption</a>
+            <a href="fire quiz.html">Fire</a>
+            <a href="general quiz.html">General Quiz</a>
+          </div>
+        </li>
+        <li class="hideOnMobile"><a href="sources.html">Sources</a></li>
+        </div>
+        <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#000000"><path d="M144-264v-72h672v72H144Zm0-180v-72h672v72H144Zm0-180v-72h672v72H144Z"/></svg></a></li>
+      </ul>
+    </nav>
+
+    <script>
+
+      function showSidebar() {
+        const sidebar = document.querySelector ('.sidebar')
+        sidebar.style.display = 'flex'
+      }
+      function hideSidebar() {
+        const sidebar = document.querySelector ('.sidebar')
+        sidebar.style.display = 'none'
+      }
+  
+      var dropdown = document.getElementsByClassName("sidebar-dropbtn");
+      var i;
+      
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var dropdownContent = this.nextElementSibling;
+          if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+          } else {
+            dropdownContent.style.display = "block";
+          }
+        });
+      }
+    </script>
+
+
+
+
+    <div class="contacts">
+    <form class="gform pure-form pure-form-stacked" method="POST" data-email="justinleea13@gmail.com" 
+    action="https://script.google.com/macros/s/AKfycbxzNvolqj2mqFPK7AiOg4RdVCZpzWvrCpFEQuA6rvA2fTRp2uKZ9hfTouq7keYcSiNM/exec">
+    <div class="form-elements"><br>
+        <div class="sign-up"><br>
+            <h1>Contact Us!</h1>
+
+            <label>Name</label>
+            <input type="text" name="name" required="" />
+  
+            <label>Email</label>
+            <input type="email" name="email" required="" />
+  
+            <label>Phone</label>
+            <input type="number"  name="phone" required="" />
+        
+            <label>Message</label>
+            <textarea  name="message" rows="8" cols="30" required="" ></textarea><br><br>
+      
+            <button>Send</button>
+        </div>
+      </div>
+  
+      <div class="thankyou_message"><br><br>
+        <h4>Thank you for contacting us!</h4>
+      </div>
+    </form>
+    </div>
+    
+
+    <script data-cfasync="false" type="text/javascript">
+      
+     (function() {
+    function validEmail(email) {
+      var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+      return re.test(email);
+    }
+  
+    function validateHuman(honeypot) {
+      if (honeypot) {
+        console.log("Robot Detected!");
+        return true;
+      } else {
+        console.log("Welcome Human!");
+      }
+    }
+    function getFormData(form) {
+      var elements = form.elements;
+  
+      var fields = Object.keys(elements).filter(function(k) {
+            return (elements[k].name !== "honeypot");
+      }).map(function(k) {
+        if(elements[k].name !== undefined) {
+          return elements[k].name;
+        }else if(elements[k].length > 0){
+          return elements[k].item(0).name;
+        }
+      }).filter(function(item, pos, self) {
+        return self.indexOf(item) == pos && item;
+      });
+  
+      var formData = {};
+      fields.forEach(function(name){
+        var element = elements[name];
+        formData[name] = element.value;
+        if (element.length) {
+          var data = [];
+          for (var i = 0; i < element.length; i++) {
+            var item = element.item(i);
+            if (item.checked || item.selected) {
+              data.push(item.value);
+            }
+          }
+          formData[name] = data.join(', ');
+        }
+      });
+  
+      // add form-specific values into the data
+      formData.formDataNameOrder = JSON.stringify(fields);
+      formData.formGoogleSheetName = form.dataset.sheet || "Sheet1"; // default sheet name
+      formData.formGoogleSendEmail = form.dataset.email || ""; // no email by default
+  
+      console.log(formData);
+      return formData;
+    }
+  
+    function handleFormSubmit(event) {  
+      event.preventDefault();           
+      var form = event.target;
+      var data = getFormData(form);         
+      if( data.email && !validEmail(data.email) ) {   
+        var invalidEmail = form.querySelector(".email-invalid");
+        if (invalidEmail) {
+          invalidEmail.style.display = "block";
+          return false;
+        }
+      } else {
+        disableAllButtons(form);
+        var url = form.action;
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', url);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.onreadystatechange = function() {
+            console.log(xhr.status, xhr.statusText);
+            console.log(xhr.responseText);
+            var formElements = form.querySelector(".form-elements")
+            if (formElements) {
+              formElements.style.display = "none"; // hide form
+            }
+            var thankYouMessage = form.querySelector(".thankyou_message");
+            if (thankYouMessage) {
+              thankYouMessage.style.display = "block";
+            }
+            return;
+        };
+        var encoded = Object.keys(data).map(function(k) {
+            return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
+        }).join('&');
+        xhr.send(encoded);
+      }
+    }
+    
+    function loaded() {
+      console.log("Contact form submission handler loaded successfully.");
+      var forms = document.querySelectorAll("form.gform");
+      for (var i = 0; i < forms.length; i++) {
+        forms[i].addEventListener("submit", handleFormSubmit, false);
+      }
+    };
+    document.addEventListener("DOMContentLoaded", loaded, false);
+  
+    function disableAllButtons(form) {
+      var buttons = form.querySelectorAll("button");
+      for (var i = 0; i < buttons.length; i++) {
+        buttons[i].disabled = true;
+      }
+    }
+  })();
+  
+  
+    </script>
+
+
+    <footer>
+      <a href="index.html"><img src="images/logo-3.png" alt="E-Safety Logo" class="logo"></a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sources.html">Sources</a></li>
+        <li><a href="contact.html">Contacts</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <p>© 2024, E-Safety</p>
+    </footer>
+
+  </body>
+</html>
